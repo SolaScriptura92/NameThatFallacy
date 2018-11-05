@@ -13,7 +13,7 @@ public class NameThatFallacyMain
 		int questionsAttempted = 0;
 		int correctAnswers = 0;
 		
-		String choice;
+		String choice = "x";
 		
 		double percentage;
 		
@@ -95,16 +95,70 @@ public class NameThatFallacyMain
 		q5.setAnswer("d");
 		myQuiz.add(q5);
 		
+		q6.setQuestion("Either you buy me a new set of makeup or you don't want me to look beautiful.\n"
+				+ "I know you want me to look beautiful, therefore you will buy me a new set of makeup.\n");
+		
+		q6.setOption("a", "Hasty Generalization");
+		q6.setOption("b", "Equivocation");
+		q6.setOption("c", "False Dichotomy");
+		q6.setOption("d", "Slippery Slope");
+		q6.setAnswer("c");
+		myQuiz.add(q6);
+		
+		q7.setQuestion("According to the sixth commandment, murder is contrary to the will of God.\n"
+				+ "Therefore the mass shooting that occurred last week could not have possibly been in accordance with the will of God.\n");
+		
+		q7.setOption("a", "Composition");
+		q7.setOption("b", "False Dichotomy");
+		q7.setOption("c", "Amphiboly");
+		q7.setOption("d", "Equivocation");
+		q7.setAnswer("d");
+		myQuiz.add(q7);
+		
+		q8.setQuestion("Pancho likes green enchiladas. He also likes butter pecan ice cream.\n"
+				+ "Therefore, he would surely enjoy green enchiladas topped with butter pecan ice cream.\n");
+		
+		q8.setOption("a", "Equivocation");
+		q8.setOption("b", "Suppressed Evidence");
+		q8.setOption("c", "Composition");
+		q8.setOption("d", "False Dichotomy");
+		q8.setAnswer("c");
+		myQuiz.add(q8);
+		
+		q9.setQuestion("Our school janitor Dave said that it is impossible to engineer a robot that performs his job duties.\n"
+				+ "In view of Dave's mastery of the janitorial arts, we must conclude that it is indeed impossible to do so.\n");
+		
+		q9.setOption("a", "Appeal to Ignorance");
+		q9.setOption("b", "Hasty Generalization");
+		q9.setOption("c", "Slippery Slope");
+		q9.setOption("d", "Appeal to Unqualified Authority");
+		q9.setAnswer("d");
+		myQuiz.add(q9);
+		
 		Collections.shuffle(myQuiz);
+		
 		
 		for(int i = 0; i < myQuiz.size(); i++)
 		{
 			System.out.print("\n" + (i + 1) + ". \n" + myQuiz.get(i).getQuestion());
 			myQuiz.get(i).printOptions();
+			System.out.println("e) Quit\n");
 			System.out.print("Your answer -> ");
 			choice = scan.next();
 			
 			//make sure you check for valid input in a while loop here.
+			
+			while(!choice.equalsIgnoreCase("a") && !choice.equalsIgnoreCase("b") && !choice.equalsIgnoreCase("c") && !choice.equalsIgnoreCase("d") && !choice.equalsIgnoreCase("e"))
+			{
+				System.out.println("\nOops! Looks like you entered an invalid option!");
+				System.out.print("Please enter a valid option -> ");
+				choice = scan.next();
+			}
+			
+			if(choice.equals("e"))
+			{
+				break;
+			}
 			
 			questionsAttempted++;
 			
