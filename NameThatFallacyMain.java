@@ -12,6 +12,7 @@ public class NameThatFallacyMain
 		
 		int questionsAttempted = 0;
 		int correctAnswers = 0;
+		final int QUIZ_SIZE = 10; //This value not to exceed the size of the ArrayList containing the questions.
 		
 		String choice = "x";
 		
@@ -135,10 +136,34 @@ public class NameThatFallacyMain
 		q9.setAnswer("d");
 		myQuiz.add(q9);
 		
+		q10.setQuestion("The lax gun laws in our country have failed to prevent mass shootings.\n"
+				+ "It's quite obvious that our government should ban citizens from possessing any firearms.\n");
+		
+		q10.setOption("a", "Straw Man");
+		q10.setOption("b", "Slippery Slope");
+		q10.setOption("c", "Missing the Point");
+		q10.setOption("d", "Hasty Generalization");
+		q10.setAnswer("c");
+		myQuiz.add(q10);
+		
+		q11.setQuestion("If you go to a university, you will acquire a substantial amount of debt.\n"
+				+ "Then your debt will continue to grow over time to the point where your credit score will be severely damaged.\n"
+		        + "Then banks will refuse to lend you money and you will never be able to own a home.\n"
+		        + "Therefore, you should not go to a university.\n");
+		
+		q11.setOption("a", "Slippery Slope");
+		q11.setOption("b", "Red Herring");
+		q11.setOption("c", "Equivocation");
+		q11.setOption("d", "Weak Analogy");
+		q11.setAnswer("a");
+		myQuiz.add(q11);
+		
+		
+		
 		Collections.shuffle(myQuiz);
 		
 		
-		for(int i = 0; i < myQuiz.size(); i++)
+		for(int i = 0; i < myQuiz.size() && i < QUIZ_SIZE; i++)
 		{
 			System.out.print("\n" + (i + 1) + ". \n" + myQuiz.get(i).getQuestion());
 			myQuiz.get(i).printOptions();
