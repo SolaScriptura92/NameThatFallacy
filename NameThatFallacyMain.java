@@ -12,7 +12,7 @@ public class NameThatFallacyMain
 		
 		int questionsAttempted = 0;
 		int correctAnswers = 0;
-		final int QUIZ_SIZE = 10; //This value not to exceed the size of the ArrayList containing the questions.
+		final int QUIZ_SIZE = 15; //This value not to exceed the size of the ArrayList containing the questions.
 		
 		String choice = "x";
 		
@@ -158,10 +158,58 @@ public class NameThatFallacyMain
 		q11.setAnswer("a");
 		myQuiz.add(q11);
 		
+		q12.setQuestion("Of course you want to study computer science at a university.\n"
+				+ "Why, it is currently one of the most popular undergraduate majors in the U.S..\n");
+		        
+		q12.setOption("a", "Appeal to snobbery");
+		q12.setOption("b", "Missing the Point");
+		q12.setOption("c", "Appeal to the People");
+		q12.setOption("d", "Slippery Slope");
+		q12.setAnswer("c");
+		myQuiz.add(q12);
 		
+		q13.setQuestion("People have been trying to prove the existence of aliens for many years, and no one has succeeded.\n"
+				+ "Therefore, it is logical to conclude that they do not exist.\n");
+		        
+		q13.setOption("a", "Hasty Generalization");
+		q13.setOption("b", "Appeal to the People");
+		q13.setOption("c", "False Cause");
+		q13.setOption("d", "Appeal to Ignorance");
+		q13.setAnswer("d");
+		myQuiz.add(q13);
+		
+		q14.setQuestion("It is the duty of police officers to uphold the law.\n"
+				+ "Last night, officer Rodriguez's friend violated the law of non-contradiction in a debate the two of them were having.\n"
+				+ "Therefore, officer Rodriguez should have given a citation to his friend last night.\n");
+		        
+		q14.setOption("a", "Suppressed Evidence");
+		q14.setOption("b", "Equivocation");
+		q14.setOption("c", "Hasty Generalization");
+		q14.setOption("d", "Amphiboly");
+		q14.setAnswer("d");
+		myQuiz.add(q14);
+		
+		q15.setQuestion("Either you agree that there is no one religion that is objectively true and binding on all people,\n"
+				+ "or you are a closed-minded bigot.\n");
+		        
+		q15.setOption("a", "Straw Man");
+		q15.setOption("b", "Argumentum ad Hominem");
+		q15.setOption("c", "False Dichotomy");
+		q15.setOption("d", "Appeal to Force");
+		q15.setAnswer("c");
+		myQuiz.add(q15);
+		
+		q16.setQuestion("James said he is an honest and upright man who would never tell a lie.\n"
+				+ "This being the case, we should accept his testimony in court as true.\n");
+		        
+		q16.setOption("a", "False Dichotomy");
+		q16.setOption("b", "Appeal to Ignorance");
+		q16.setOption("c", "Amphiboly");
+		q16.setOption("d", "Begging the Question");
+		q16.setAnswer("d");
+		myQuiz.add(q16);
 		
 		Collections.shuffle(myQuiz);
-		
 		
 		for(int i = 0; i < myQuiz.size() && i < QUIZ_SIZE; i++)
 		{
@@ -170,8 +218,6 @@ public class NameThatFallacyMain
 			System.out.println("e) Quit\n");
 			System.out.print("Your answer -> ");
 			choice = scan.next();
-			
-			//make sure you check for valid input in a while loop here.
 			
 			while(!choice.equalsIgnoreCase("a") && !choice.equalsIgnoreCase("b") && !choice.equalsIgnoreCase("c") && !choice.equalsIgnoreCase("d") && !choice.equalsIgnoreCase("e"))
 			{
