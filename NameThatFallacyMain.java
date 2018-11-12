@@ -209,7 +209,56 @@ public class NameThatFallacyMain
 		q16.setAnswer("d");
 		myQuiz.add(q16);
 		
+		q17.setQuestion("Professor Leonard argues that people should not smoke cigarettes because of various health issues they produce.\n"
+				+ "However, I witnessed him smoking a cigarette just a few days ago!\n"
+				+ "Therefore, his arguments against smoking cigarettes are not even worthy of our attention.\n");
+		        
+		q17.setOption("a", "Begging the Question");
+		q17.setOption("b", "Straw Man");
+		q17.setOption("c", "Tu Quoque (\"You too\"");
+		q17.setOption("d", "Appeal to Ignorance");
+		q17.setAnswer("c");
+		myQuiz.add(q17);
+		
+		q18.setQuestion("Senator Pablo Garcia contends that there ought to be reform in our immigration laws.\n"
+				+ "Mr. Garcia is hispanic and his parents were not born even born in this country, so of course he would argue for such!\n"
+				+ "Clearly then, his arguments for reformation in our immigration laws are biased and therefore should not be heeded.\n");
+		        
+		q18.setOption("a", "Hasty Generalization");
+		q18.setOption("b", "ad Hominem Circumstantial");
+		q18.setOption("c", "Missing The Point");
+		q18.setOption("d", "Begging the Question");
+		q18.setAnswer("b");
+		myQuiz.add(q18);
+		
+		q19.setQuestion("Every time I have successfully passed an interview, I got a haircut at Bob's Barbershop the day before.\n"
+				+ "Therefore, if I want to pass my next interview, then I must get a haircut at Bob's the day before.\n");
+		        
+		q19.setOption("a", "Slippery Slope");
+		q19.setOption("b", "Hasty Generalization");
+		q19.setOption("c", "Missing The Point");
+		q19.setOption("d", "False Cause");
+		q19.setAnswer("d");
+		myQuiz.add(q19);
+		
+		q20.setQuestion("Albert flipped a fair coin four times and it turned up heads all four times.\n"
+				+ "Therefore, it is extremely likely that his next flip will come up tails.\n");
+		        
+		q20.setOption("a", "Hasty Generalization");
+		q20.setOption("b", "Accident");
+		q20.setOption("c", "Gambler's Fallacy");
+		q20.setOption("d", "Weak Analogy");
+		q20.setAnswer("c");
+		myQuiz.add(q20);
+		
 		Collections.shuffle(myQuiz);
+		
+		System.out.println("*** NAME THAT FALLACY ***\n");
+		System.out.println("Hello, and welcome to my quiz game that will test your knowledge of informal fallacies!");
+		System.out.println("For each set of statements, please choose the fallacy that best matches the fallacy being committed in the statements as a whole.");
+		System.out.println("There are " + QUIZ_SIZE + " questions, but you may quit at any time by choosing option 'e'");
+		System.out.println("Whether you make it to the end of the quiz or choose to quit beforehand, your score will be displayed at the end.");
+		System.out.println("Have fun! :)");
 		
 		for(int i = 0; i < myQuiz.size() && i < QUIZ_SIZE; i++)
 		{
@@ -273,5 +322,4 @@ public class NameThatFallacyMain
 			System.out.println("You failed...but don't worry! Study hard and try again! :D");
 		}	
 	}
-
 }
