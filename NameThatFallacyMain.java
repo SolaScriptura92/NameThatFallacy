@@ -294,32 +294,40 @@ public class NameThatFallacyMain
 			}
 		}
 		
-		percentage = ((double)correctAnswers / questionsAttempted) * 100;
-		
-		BigDecimal rounded = new BigDecimal(Double.toString(percentage));
-		rounded = rounded.setScale(2, BigDecimal.ROUND_HALF_EVEN);
-		
-		System.out.print("\nYour final score is: " + correctAnswers + "/" + questionsAttempted);
-		System.out.println(" (" + rounded + "%)\n");
-		
-		if(percentage >= 90)
+		if(questionsAttempted != 0)
 		{
-			System.out.println("Great job! Aristotle would be proud! :D");
-		}
-		
-		else if(percentage >= 80)
-		{
-			System.out.println("Good job! I know you can do better though! :)");
-		}
-		
-		else if(percentage >= 70)
-		{
-			System.out.println("Well...you passed! :)");
+			percentage = ((double)correctAnswers / questionsAttempted) * 100;
+			
+			BigDecimal rounded = new BigDecimal(Double.toString(percentage));
+			rounded = rounded.setScale(2, BigDecimal.ROUND_HALF_EVEN);
+			
+			System.out.print("\nYour final score is: " + correctAnswers + "/" + questionsAttempted);
+			System.out.println(" (" + rounded + "%)\n");
+			
+			if(percentage >= 90)
+			{
+				System.out.println("Great job! Aristotle would be proud! :D");
+			}
+			
+			else if(percentage >= 80)
+			{
+				System.out.println("Good job! I know you can do better though! :)");
+			}
+			
+			else if(percentage >= 70)
+			{
+				System.out.println("Well...you passed! :)");
+			}
+			
+			else
+			{
+				System.out.println("You failed...but don't worry! Study hard and try again! :D");
+			}	
 		}
 		
 		else
 		{
-			System.out.println("You failed...but don't worry! Study hard and try again! :D");
-		}	
+			System.out.println("\nYou didn't even attempt one question! :( Chales tamales!");
+		}
 	}
 }
